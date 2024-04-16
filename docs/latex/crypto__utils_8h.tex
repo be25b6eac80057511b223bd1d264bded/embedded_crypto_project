@@ -1,0 +1,67 @@
+\doxysection{src/crypto\+\_\+utils.h File Reference}
+\hypertarget{crypto__utils_8h}{}\label{crypto__utils_8h}\index{src/crypto\_utils.h@{src/crypto\_utils.h}}
+
+
+Утилитарные функции, требуемые для удобной работы с библиотекой  
+
+
+{\ttfamily \#include "{}./crypto\+\_\+types.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+crypto\+\_\+res\+\_\+t \mbox{\hyperlink{crypto__utils_8h_a966807261aca7d84e75690c7b89b3462}{crypto\+\_\+hex2b}} (char \texorpdfstring{$\ast$}{*}src, crypto\+\_\+uint8\+\_\+t \texorpdfstring{$\ast$}{*}dst, int cnt)
+\begin{DoxyCompactList}\small\item\em Функция для перевода шестнадцатеричной строки в массив байтов \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{crypto__utils_8h_a0d556733f0218a68ff5cbac6f704eb9c}{crypto\+\_\+b2hex}} (crypto\+\_\+uint8\+\_\+t \texorpdfstring{$\ast$}{*}src, char \texorpdfstring{$\ast$}{*}dst, int cnt)
+\begin{DoxyCompactList}\small\item\em Функция для перевода массива байтов в шестнадцатеричную строку \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Утилитарные функции, требуемые для удобной работы с библиотекой 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{crypto__utils_8h_a0d556733f0218a68ff5cbac6f704eb9c}\label{crypto__utils_8h_a0d556733f0218a68ff5cbac6f704eb9c} 
+\index{crypto\_utils.h@{crypto\_utils.h}!crypto\_b2hex@{crypto\_b2hex}}
+\index{crypto\_b2hex@{crypto\_b2hex}!crypto\_utils.h@{crypto\_utils.h}}
+\doxysubsubsection{\texorpdfstring{crypto\_b2hex()}{crypto\_b2hex()}}
+{\footnotesize\ttfamily void crypto\+\_\+b2hex (\begin{DoxyParamCaption}\item[{crypto\+\_\+uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{src,  }\item[{char \texorpdfstring{$\ast$}{*}}]{dst,  }\item[{int}]{cnt }\end{DoxyParamCaption})}
+
+
+
+Функция для перевода массива байтов в шестнадцатеричную строку 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em src} & -\/ исходный массив байтов \\
+\hline
+\mbox{\texttt{ out}}  & {\em dst} & -\/ буффер для итоговой строки \\
+\hline
+\mbox{\texttt{ in}}  & {\em cnt} & -\/ количество байтов для перевода \\
+\hline
+\end{DoxyParams}
+\Hypertarget{crypto__utils_8h_a966807261aca7d84e75690c7b89b3462}\label{crypto__utils_8h_a966807261aca7d84e75690c7b89b3462} 
+\index{crypto\_utils.h@{crypto\_utils.h}!crypto\_hex2b@{crypto\_hex2b}}
+\index{crypto\_hex2b@{crypto\_hex2b}!crypto\_utils.h@{crypto\_utils.h}}
+\doxysubsubsection{\texorpdfstring{crypto\_hex2b()}{crypto\_hex2b()}}
+{\footnotesize\ttfamily crypto\+\_\+res\+\_\+t crypto\+\_\+hex2b (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{src,  }\item[{crypto\+\_\+uint8\+\_\+t \texorpdfstring{$\ast$}{*}}]{dst,  }\item[{int}]{cnt }\end{DoxyParamCaption})}
+
+
+
+Функция для перевода шестнадцатеричной строки в массив байтов 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em src} & -\/ шестнадцатеричная строка~\newline
+\\
+\hline
+\mbox{\texttt{ out}}  & {\em dst} & -\/ буффер для массива байтов~\newline
+\\
+\hline
+\mbox{\texttt{ in}}  & {\em cnt} & -\/ количество байтов в итоговом массиве~\newline
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Код возврата. Если в src не находятся валидные цифры шестнадцатеричной системы, возвращается CRYPTO\+\_\+\+BAD\+\_\+\+INPUT, иначе CRYPTO\+\_\+\+OK. 
+\end{DoxyReturn}
